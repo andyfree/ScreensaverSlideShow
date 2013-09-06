@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/presetDurationText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:maxWidth="@dimen/Text_Field_Max"
+            android:text="Preset (Duration for a folder toggle)" />
+
+        <NumberPicker
+            android:id="@+id/preset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical" />
+
+        <Spinner
+            android:id="@+id/presetTimeFormat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="80"
+            android:entries="@array/timeFormat" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/displayDurationText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:maxWidth="@dimen/Text_Field_Width"
+            android:text="Duration (Display duration for a single file)"
+            android:width="@dimen/Text_Field_Max" />
+
+        <NumberPicker
+            android:id="@+id/duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical" />
+        
+                <Spinner
+                    android:id="@+id/durationTimeFormat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="80"
+                    android:entries="@array/timeFormat" />
+
+    </LinearLayout>
+    
+    
+<!--     <EditText
+        android:id="@+id/txt_your_name"
+        android:layout_width="match_parent"  android:layout_height="wrap_content" 
+        android:inputType="text"
+        android:imeOptions="actionDone" />
+ -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/updateSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:padding="@dimen/padding"
+            android:text="Done" />
+
+    </LinearLayout>
+
+</LinearLayout>

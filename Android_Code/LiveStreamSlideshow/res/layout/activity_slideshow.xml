@@ -1,0 +1,111 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc" 
+    tools:context=".SlideshowActivity" >
+<!-- #00000000 #0099cc-->
+    <!--
+         The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc.
+    -->
+
+	<!--  The views in this panel are set to 'gone' for the visibility parameter. -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#0099cc"
+       	android:id="@+id/fullscreen_content"
+        
+         >
+	    <RelativeLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:background="#0099cc"
+	       	android:id="@+id/containerView"
+	        
+	         >
+        
+		    <ImageView
+		        
+		        android:id="@+id/imageView1"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:gravity="center"
+		        android:keepScreenOn="true"
+		        android:src="@drawable/ic_launcher"
+		        android:visibility="visible"
+		        android:layout_centerHorizontal="true"
+		        android:layout_centerVertical="true"
+	
+		         />
+		
+		    <VideoView
+		        android:id="@+id/videoView1"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent" 
+		        android:gravity="center"
+		        android:layout_centerHorizontal="true"
+		        android:layout_centerVertical="true"
+		        
+		        android:keepScreenOn="true"
+		        android:visibility="gone"
+		        />
+		    
+<!-- 		    <TextView
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:gravity="center"
+		        android:keepScreenOn="true"
+		        android:text="@string/dummy_content"
+		        android:textColor="#33b5e5"
+		        android:textSize="50sp"
+		        android:textStyle="bold"
+		        android:visibility="visible"
+		         />
+ --> 	   </RelativeLayout>
+		    
+    </RelativeLayout>
+
+
+    <!--
+         This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows.
+    -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true" >
+
+        <LinearLayout
+            android:id="@+id/fullscreen_content_controls"
+            style="?buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/black_overlay"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent" >
+
+            <Button
+                android:id="@+id/configureButton"
+                style="?buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/configure_button" />
+            <Button
+                android:id="@+id/configureTimer"
+                style="?buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/configure_timer" />
+            
+            </LinearLayout>
+    </FrameLayout>
+
+</FrameLayout>

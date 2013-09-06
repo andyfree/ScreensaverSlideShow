@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="Text_Field_Width">50sp</dimen>
+    <dimen name="Text_Field_Max">100sp</dimen>
+    <dimen name="padding">10dp</dimen>
+</resources>
