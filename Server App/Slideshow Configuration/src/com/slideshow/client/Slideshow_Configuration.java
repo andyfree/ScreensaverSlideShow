@@ -13,6 +13,7 @@ import com.google.gwt.user.client.ui.VerticalPanel;
 
 /**
  * Entry point classes define <code>onModuleLoad()</code>.
+ * 
  */
 public class Slideshow_Configuration implements EntryPoint {
 
